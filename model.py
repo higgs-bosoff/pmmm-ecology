@@ -19,12 +19,12 @@ class MWModel(object):
         return 1.0/(self.t0+self.eta*self.b*self.w*self.W)
 
     def eqWpop(self):
-        return ((self.t0**2+4*self.eta)-self.t0)/(2*self.eta*self.b*self.w)
+        return ((self.t0**2+4*self.eta)**0.5-self.t0)/(2*self.eta*self.b*self.w)
 
     def eqTotDecayRate(self):
         W = self.eqWpop()
 
-        return 1/(self.t0+self.eta*self.b*self.w*W)+self.b*(1-self.w)
+        return 1/(self.t0+self.eta*self.b*self.w*W)+self.b*(1-self.w)*W
 
     def step(self, dt):
 
