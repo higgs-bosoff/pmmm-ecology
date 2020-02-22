@@ -1,6 +1,8 @@
 \documentclass[]{article}
 
 \usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
 
 %opening
 \title{Magical ecologies: a model of predator-prey equilibria for closed systems of magical girls and witches}
@@ -82,6 +84,46 @@ P_{eq} &=   E_{decay}\frac{M_{eq}}{\tau_0+\eta b w W_{eq}}-E_{wish}r \\
 \end{align}
 
 . This is the second, surprising key result of this work: \textit{at equilibrium, the energy production depends only on the recruiting rate and the win rate of magical girls}. Maximum efficiency is reached in a condition in which the magical girls win every time against the witches. While this may sound counterintuitive, as winning leads magical girls to gather grief seeds and thus slow down decay, it makes sense if we consider that each loss of a magical girl to a witch is an inefficiency, as it wastes their wish energy without delivering any decay payoff. Conversely, a highly successful population of magical girls will succumb only to decay, however long that might take. In an equilibrium condition the effective rate is then controlled by recruitment. For low $r$, there will be a small amount of long lived veterans. For high $r$, the turnover will be much faster, due to having the same population of witches, but a much higher population of magical girls to split the grief seeds between. Nevertheless, it is in the best interest of the local Kyubey agents to guarantee that their magical girls are as close to 100\% successful in battle as possible, as that results in maximum conversion efficiency.
+
+\subsection{Dynamics}
+
+Having verified that an equilibrium exists, however, it remains to be seen under which conditions it is stable, which is the major concern for operators on the field. Luckily, intuition already tells us that this is likely to be the case. The decay term in Eq. \ref{eq_mg} and \ref{eq_w} has clearly a stabilising effect. In presence of an excess of witches, it will cause the life of magical girls to get longer, thanks to a greater availability of grief seeds; while if there were too few, the decay process would speed up and compensate. This can also be seen by analysing Eq. \ref{eq_w} around its equilibrium point, as the sign of the derivative is opposite to that of the error, $W-W_{eq}$. However, in order to gain a more detailed understanding of these dynamical processes, we carry out numerical integration of the equations for a number of different scenarios.\newline
+
+\begin{figure}
+	\includegraphics[width=0.7\textwidth]{fig1}
+	\centering
+	\caption{Model 1. Initial conditions: $M > M_{eq}$, $W < W_{eq}$.}	
+	\label{fig1}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.7\textwidth]{fig2}
+	\centering
+	\caption{Model 2. Initial conditions: $M < M_{eq}$, $W > W_{eq}$.}	
+	\label{fig2}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=0.7\textwidth]{fig3}
+	\centering
+	\caption{Model 3. Initial conditions: $M > M_{eq}$, $W > W_{eq}$. The low win rate ($w = 0.1)$ causes an oscillation in the magical girl population before equilibrium is reached.}	
+	\label{fig3}
+\end{figure}
+
+Figures \ref{fig1}-\ref{fig3} show some possible scenarios. These start with off-equilibrium values of $M$ and $W$ and converge over time. The time scale is determined by setting $\tau_0=1$. As one can see, all the convergence is quick and without incident, regardless of starting conditions. Figure \ref{fig3} shows an example in which an oscillation of the magical girl population can be observed. This is the consequence of a specifically `soft' model, with a low win rate ($w=0.1$). While convergence eventually still occurs, this is another reason for why a high win rate for magical girls is generally desirable - as it tends to result in a faster and surer convergence of populations to their equilibrium values.
+
+\section{Conclusions}
+An idealised model describing the population dynamics of magical girls and witches in a closed environment has been developed and characterised. The model allows us some important and non trivial insights in the ecological balance of such populations, in particular:
+
+\begin{itemize}
+	\item that the density of witch population sustainable by a territory is independent of the population of magical girls, and only depends on the properties of the territory itself,
+	\item that the population of magical girls is directly proportional to the recruitment rate, and
+	\item that the energy production rate due to the decay of magical girls into witches is maximally efficient when the former have high rates of success in battle against the latter.
+\end{itemize}
+
+In practical field applications, of course, these considerations will need to be balanced with other requirements. For example, while a high recruitment rate and a perfect win rate would maximise energy production as per Eq. \ref{net_power}, they would actively work against the psychological needs of recruitment itself, which often relies on the threat posed by witches as a motivational factor. If witches are vastly outnumbered by magical girls and are dispatched quickly and reliably, the appeal of such arguments would be significantly weakened. Regardless, these results provide useful guidelines that need then to be integrated within the larger needs of ecological management.\newline
+There are also potentially significant effects that have been ignored in this first model. Among them are any finite-size effects that could manifest in the situation in which an area was significantly overcrowded with witches or magical girls; the possibility, documented albeit of relatively small incidence, of internal combat and even murder within magical girls \cite{kyubey3}; and any effects due to the finiteness of the indigenous population if put under extreme stress due to either the drain of recruitment or the damage caused by witches. While some or all of these effects can matter in extreme circumstances, we believe that in the case of well-managed systems, the conditions for them to be important should never verify, and the results of this paper should hold. Nevertheless, the inclusion of such effects will be the object of study of future work.
+
 
 \bibliographystyle{unsrt}
 \bibliography{mweco}

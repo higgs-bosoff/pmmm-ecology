@@ -5,36 +5,37 @@ The style file: unsrt.bst
 Database file #1: mweco.bib
 Warning--empty journal in kyubey1
 Warning--empty journal in kyubey2
-You've used 2 entries,
+Warning--empty journal in kyubey3
+You've used 3 entries,
             1791 wiz_defined-function locations,
-            452 strings with 3647 characters,
-and the built_in function-call counts, 276 in all, are:
-= -- 20
-> -- 8
+            455 strings with 3719 characters,
+and the built_in function-call counts, 404 in all, are:
+= -- 30
+> -- 12
 < -- 0
-+ -- 4
-- -- 2
-* -- 8
-:= -- 55
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 2
++ -- 6
+- -- 3
+* -- 11
+:= -- 78
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 3
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 16
-empty$ -- 29
-format.name$ -- 2
-if$ -- 55
+cite$ -- 6
+duplicate$ -- 24
+empty$ -- 43
+format.name$ -- 3
+if$ -- 82
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 10
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 18
+num.names$ -- 3
+pop$ -- 15
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 6
+skip$ -- 9
 stack$ -- 0
 substring$ -- 0
 swap$ -- 0
@@ -42,8 +43,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 2
-while$ -- 2
-width$ -- 3
-write$ -- 20
-(There were 2 warnings)
+warning$ -- 3
+while$ -- 3
+width$ -- 4
+write$ -- 29
+(There were 3 warnings)
